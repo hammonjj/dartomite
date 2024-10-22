@@ -1,3 +1,5 @@
+A sample command-line application with an entrypoint in `bin/`, library code
+in `lib/`, and example unit test in `test/`.
 # Dartomite
 ## General
 This project is a test project as I build APIs in several different frameworks to determine what I most prefer these days. The landscape of backend frameworks has changed dramatically over the last few years since I last dug in to them. I have one other project I am going to build at the moment that will mirror this one called [Denoomite](https://github.com/hammonjj/denomite)
@@ -13,3 +15,4 @@ Key features include:
 License: MIT (Commercial use allowed with attribution)
 
 ## Commands
+- Generate files (mocks, translations, response objects, etc.): `dart run build_runner build --delete-conflicting-outputs`

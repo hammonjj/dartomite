@@ -26,5 +26,10 @@ doc/api/
 .flutter-plugins
 .flutter-plugins-dependencies
 
+# Generated files
+*.mocks.dart
+*.g.dart
+*.freezed.dart
+
 .DS_Store
 *.sqlite
