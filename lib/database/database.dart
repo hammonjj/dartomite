@@ -12,7 +12,6 @@ part 'database.g.dart';
 
 LazyDatabase _openConnection() {
   return LazyDatabase(() async {
-    print(p.join(Directory.current.path, 'dartomite.db'));
     return NativeDatabase(File(p.join(Directory.current.path, 'dartomite.db')));
   });
 }
@@ -48,7 +47,7 @@ class AppDatabase extends _$AppDatabase {
 
     final adminUserId = await into(users).insert(
       UsersCompanion(
-        name: const Value('george.beefeater@dartomite.com'),
+        name: const Value('George Beefeater'),
         email: const Value('george.beefeater@dartomite.com'),
         password: Value(hashPassword('beefeater')),
       ),
@@ -56,7 +55,7 @@ class AppDatabase extends _$AppDatabase {
 
     final userUserId = await into(users).insert(
       UsersCompanion(
-        name: const Value('laura.leafnibbler@dartomite.com'),
+        name: const Value('Laura Leafnibbler'),
         email: const Value('laura.leafnibbler@dartomite.com'),
         password: Value(hashPassword('leafnibbler')),
       ),
