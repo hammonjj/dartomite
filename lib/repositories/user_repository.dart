@@ -1,7 +1,7 @@
 import 'package:dartomite/database/database.dart';
-import 'package:dartomite/dtos/create_user_dto.dart';
-import 'package:dartomite/dtos/response_user_dto.dart';
-import 'package:dartomite/dtos/update_user_dto.dart';
+import 'package:dartomite/dtos/users/create_user_dto.dart';
+import 'package:dartomite/dtos/users/response_user_dto.dart';
+import 'package:dartomite/dtos/users/update_user_dto.dart';
 import 'package:dartomite/utils/hash_password.dart';
 import 'package:drift/drift.dart';
 
@@ -66,7 +66,7 @@ class UserRepository {
     final updatedRows = await query.write(userCompanion);
 
     if (updatedRows == 0) {
-      return null;
+      throw Exception('User with ID $id not found or not updated.');
     }
 
     return getUserById(id);

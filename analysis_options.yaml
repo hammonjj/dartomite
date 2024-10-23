@@ -3,9 +3,13 @@ analyzer:
   errors:
     lines_longer_than_80_chars: ignore
     public_member_api_docs: ignore
-    sort_constructors_first: ignore
+    sort_constructors_first: ignore  
+    require_trailing_commas: ignore
+
   exclude:
     - build/**
+    - test/**/*.mocks.dart # Exclude generated mocks
+    - lib/**/**.g.dart # Exclude generated response files
 linter:
   rules:
     file_names: false

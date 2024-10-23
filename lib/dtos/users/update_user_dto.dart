@@ -7,8 +7,14 @@ class UpdateUserDto {
   final String? name;
   final String? email;
   final String? password;
+  final int? groupId;
 
-  UpdateUserDto({this.name, this.email, this.password});
+  UpdateUserDto({
+    this.name,
+    this.email,
+    this.password,
+    this.groupId,
+  });
 
   factory UpdateUserDto.fromJson(Map<String, dynamic> json) => _$UpdateUserDtoFromJson(json);
 
